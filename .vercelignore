@@ -1,0 +1,12 @@
+server/
+node_modules
+.env.local
+.env
+*.log
+.DS_Store
+.git
+README.md
+replit.md
+*.md
+coverage/
+.nyc_output/

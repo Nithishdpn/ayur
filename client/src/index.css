@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(120, 60%, 25%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(120, 25%, 90%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  
+  /* Ayurvedic color palette */
+  --ayurveda-bg-primary: hsl(120, 25%, 94%);
+  --ayurveda-bg-secondary: hsl(0, 0%, 100%);
+  --ayurveda-accent: hsl(120, 60%, 25%);
+  --ayurveda-mint: hsl(120, 25%, 90%);
+  --ayurveda-forest: hsl(120, 60%, 25%);
+  --ayurveda-sage: hsl(120, 25%, 94%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(120, 60%, 25%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .gradient-bg {
+    background: linear-gradient(135deg, var(--ayurveda-bg-primary) 0%, var(--ayurveda-bg-secondary) 100%);
+  }
+  
+  .gradient-reverse {
+    background: linear-gradient(135deg, var(--ayurveda-bg-secondary) 0%, var(--ayurveda-bg-primary) 100%);
+  }
+  
+  .card-hover {
+    transition: all 0.3s ease;
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(45, 80, 22, 0.1);
+  }
+  
+  .ayurveda-bg-primary {
+    background-color: var(--ayurveda-bg-primary);
+  }
+  
+  .ayurveda-bg-secondary {
+    background-color: var(--ayurveda-bg-secondary);
+  }
+  
+  .ayurveda-accent {
+    color: var(--ayurveda-accent);
+  }
+  
+  .ayurveda-accent-bg {
+    background-color: var(--ayurveda-accent);
+  }
+  
+  .ayurveda-mint-bg {
+    background-color: var(--ayurveda-mint);
+  }
+  
+  .ayurveda-forest {
+    color: var(--ayurveda-forest);
+  }
+  
+  .ayurveda-forest-bg {
+    background-color: var(--ayurveda-forest);
+  }
+}
