@@ -4,7 +4,6 @@
   "outputDirectory": "dist/public",
   "devCommand": "npm run dev:client",
   "installCommand": "npm install",
-  "nodeVersion": "18.x",
   "functions": {
     "api/**/*.js": {
       "runtime": "nodejs18.x"
